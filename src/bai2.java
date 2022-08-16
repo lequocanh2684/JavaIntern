@@ -23,10 +23,11 @@ public class bai2 {
     }
 
     public static void main(String[] args){
-        Scanner scn = new Scanner(System.in);
-        System.out.print("Nhập một số nguyên: ");
-        int x = scn.nextInt();
-        check(x);
+        try (Scanner scn = new Scanner(System.in)) {
+            System.out.print("Nhập một số nguyên: ");
+            int x = scn.nextInt();
+            check(x);
+        }
 
     }
 }
