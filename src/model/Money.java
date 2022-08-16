@@ -1,7 +1,8 @@
+package model;
 
-public class Money{
-    private long loan; 
-    double interest_rate; 
+public class Money {
+    private long loan;
+    double interest_rate;
     int loan_month;
 
     public long getLoan() {
@@ -36,23 +37,16 @@ public class Money{
         this.loan_month = loan_month;
     }
 
-
-    public Money input(){
-        Money _money = new Money();
-        this.
-        
-    }
-
-    public static void output(bai2 _money){
-        long[] moneyPayPerMonth = new long[_money.loan_month];
-        long principal = _money.loan/_money.loan_month;
-        long loantemp = _money.loan;
-        for(int i = 0; i < _money.loan_month; i++){
+    public void output(){
+        long[] moneyPayPerMonth = new long[this.loan_month];
+        long principal = this.loan/this.loan_month;
+        long loanTemp = this.loan;
+        for(int i = 0; i < this.loan_month; i++){
             int n = i + 1;
-            moneyPayPerMonth[i] = principal + (long)((double)loantemp *_money.interest_rate);
-            System.out.println("Thang thu " + n + ": " +  principal + " + " + "(" + loantemp + " x "
-            + _money.interest_rate + ") " + "= " + moneyPayPerMonth[i]);
-            loantemp-=principal;
+            moneyPayPerMonth[i] = principal + (long)((double)loanTemp * this.interest_rate);
+            System.out.println("Thang thu " + n + ": " +  principal + " + " + "(" + loanTemp + " x "
+                    + this.interest_rate + ") " + "= " + moneyPayPerMonth[i]);
+            loanTemp-=principal;
         }
     }
 }

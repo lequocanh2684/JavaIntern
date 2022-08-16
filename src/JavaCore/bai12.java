@@ -1,3 +1,5 @@
+package JavaCore;
+
 import java.util.Scanner;
 public class bai12 {
     public static void input(int[] a, int _i, int n){

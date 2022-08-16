@@ -1,5 +1,0 @@
-package model;
-public class HocSinh {
-    private String id;
-
-}

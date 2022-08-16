@@ -1,16 +1,18 @@
+package JavaCore;
+
 import java.util.Scanner;
 import java.util.regex.*;
 
-public class bai5 {
+public class bai20 {
     public static void main(String[] args){
         try (Scanner scn = new Scanner(System.in)) {
             System.out.print("Nhập mã số sinh viên: ");
             String a = scn.nextLine();
-            Pattern p = Pattern.compile("B[0-9]{7}");
+            Pattern p = Pattern.compile("^[A-Z][^\\s]{1,18}[0-9]$");
             Matcher m = p.matcher(a);
             boolean check = m.matches();
-            if(check) System.out.println("mã số vừa nhập đã đúng định dạng");
-            else System.out.println("mã số vừa nhập không đúng định dạng");
+            if(check) System.out.println("Duyệt");
+            else System.out.println("Không duyệt");
         }
     }
 }

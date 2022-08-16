@@ -1,3 +1,5 @@
+package JavaCore;
+
 import java.util.Scanner;
 public class bai7 {
     public static void main(String[] args) {
